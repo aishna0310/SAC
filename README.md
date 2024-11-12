@@ -22,13 +22,20 @@ With these advancements, our work significantly broadens AI’s capability in pe
 # Running the Code
 
 Follow these steps to run the model:
+#
 Run ../models/gpt4/neutral.py
+#
 Run ../models/gpt4/parser.py
+#
 Run ../models/gpt4/personality_prompting/prompting.py
+#
 Run ../models/gpt4/parser.py (repeat)
+#
 Run ../models/gpt4/sac.py
+#
 Run ../models/gpt4/sac_scoring.py
-These scripts will guide the AI through setting up a neutral baseline, parsing personality data, and applying prompt-based personality traits with specified intensity levels.
+#
+These scripts will guide the LLM through setting up a neutral baseline, parsing personality data, and applying prompt-based personality traits with specified intensity levels.
 
 
 
