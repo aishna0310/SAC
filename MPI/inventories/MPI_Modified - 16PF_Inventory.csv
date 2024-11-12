@@ -1,0 +1,164 @@
+label_raw,text,label_16_pf,key
+WARMTH,Know how to comfort others.,A,1
+WARMTH,Enjoy bringing people together.,A,1
+WARMTH,Feel others' emotions.,A,1
+WARMTH,Take an interest in other people's lives.,A,1
+WARMTH,Cheer people up.,A,1
+WARMTH,Make people feel at ease.,A,1
+WARMTH,Take time out for others.,A,1
+WARMTH,Don't like to get involved in other people's problems.,A,-1
+WARMTH,Am not really interested in others.,A,-1
+WARMTH,Try not to think about the needy.,A,-1
+INTELLECT,Make insightful remarks.,B,1
+INTELLECT,Know the answers to many questions.,B,1
+INTELLECT,Tend to analyze things.,B,1
+INTELLECT,Use my brain.,B,1
+INTELLECT,Learn quickly.,B,1
+INTELLECT,Counter others' arguments.,B,1
+INTELLECT,Reflect on things before acting.,B,1
+INTELLECT,Weigh the pros against the cons.,B,1
+INTELLECT,Consider myself an average person.,B,-1
+INTELLECT,Get confused easily.,B,-1
+INTELLECT,Know that I am not a special person.,B,-1
+INTELLECT,Have a poor vocabulary.,B,-1
+INTELLECT,Skip difficult words while reading.,B,-1
+EMOTIONAL STABILITY,Seldom feel blue.,C,1
+EMOTIONAL STABILITY,Feel comfortable with myself.,C,1
+EMOTIONAL STABILITY,Readily overcome setbacks.,C,1
+EMOTIONAL STABILITY,Am relaxed most of the time.,C,1
+EMOTIONAL STABILITY,Am not easily frustrated.,C,1
+EMOTIONAL STABILITY,Have frequent mood swings.,C,-1
+EMOTIONAL STABILITY,Often feel blue.,C,-1
+EMOTIONAL STABILITY,Dislike myself.,C,-1
+EMOTIONAL STABILITY,Feel desperate.,C,-1
+EMOTIONAL STABILITY,Am easily discouraged.,C,-1
+ASSERTIVENESS,Take charge.,E,1
+ASSERTIVENESS,Want to be in charge.,E,1
+ASSERTIVENESS,Say what I think.,E,1
+ASSERTIVENESS,Am not afraid of providing criticism.,E,1
+ASSERTIVENESS,Take control of things.,E,1
+ASSERTIVENESS,Can take strong measures.,E,1
+ASSERTIVENESS,Wait for others to lead the way.,E,-1
+ASSERTIVENESS,Never challenge things.,E,-1
+ASSERTIVENESS,Let others make the decisions.,E,-1
+ASSERTIVENESS,Let myself be pushed around.,E,-1
+GREGARIOUSNESS,Am the life of the party.,F,1
+GREGARIOUSNESS,Love large parties.,F,1
+GREGARIOUSNESS,Joke around a lot.,F,1
+GREGARIOUSNESS,Enjoy being part of a loud crowd.,F,1
+GREGARIOUSNESS,Amuse my friends.,F,1
+GREGARIOUSNESS,Act wild and crazy.,F,1
+GREGARIOUSNESS,Seldom joke around.,F,-1
+GREGARIOUSNESS,Don't like crowded events.,F,-1
+GREGARIOUSNESS,Am the last to laugh at a joke.,F,-1
+GREGARIOUSNESS,Dislike loud music.,F,-1
+DUTIFULNESS,Believe laws should be strictly enforced.,G,1
+DUTIFULNESS,Try to follow the rules.,G,1
+DUTIFULNESS,Believe in one true religion.,G,1
+DUTIFULNESS,Respect authority.,G,1
+DUTIFULNESS,Like to stand during the national anthem.,G,1
+DUTIFULNESS,Resist authority.,G,-1
+DUTIFULNESS,Break rules.,G,-1
+DUTIFULNESS,Use swear words.,G,-1
+DUTIFULNESS,Oppose authority.,G,-1
+DUTIFULNESS,Know how to get around the rules.,G,-1
+FRIENDLINESS,Feel comfortable around people.,H,1
+FRIENDLINESS,Talk to a lot of different people at parties.,H,1
+FRIENDLINESS,Don't mind being the center of attention.,H,1
+FRIENDLINESS,Make friends easily.,H,1
+FRIENDLINESS,Start conversations.,H,1
+FRIENDLINESS,Find it difficult to approach others.,H,-1
+FRIENDLINESS,Often feel uncomfortable around others.,H,-1
+FRIENDLINESS,Have little to say.,H,-1
+FRIENDLINESS,Am quiet around strangers.,H,-1
+FRIENDLINESS,Keep in the background.,H,-1
+SENSITIVITY,Like to read.,I,1
+SENSITIVITY,Enjoy discussing movies and books with others.,I,1
+SENSITIVITY,Read a lot.,I,1
+SENSITIVITY,Don't like action movies.,I,1
+SENSITIVITY,Cry during movies.,I,1
+SENSITIVITY,Love flowers.,I,1
+SENSITIVITY,Do not enjoy watching dance performances.,I,-1
+SENSITIVITY,Do not like poetry.,I,-1
+SENSITIVITY,Dislike works of fiction.,I,-1
+SENSITIVITY,Rarely notice my emotional reactions.,I,-1
+DISTRUST,Find it hard to forgive others.,L,1
+DISTRUST,Suspect hidden motives in others.,L,1
+DISTRUST,Am wary of others.,L,1
+DISTRUST,Distrust people.,L,1
+DISTRUST,Believe that people seldom tell you the whole truth.,L,1
+DISTRUST,Believe that people are essentially evil.,L,1
+DISTRUST,Trust what people say.,L,-1
+DISTRUST,Trust others.,L,-1
+DISTRUST,Believe that others have good intentions.,L,-1
+DISTRUST,Believe that people are basically moral.,L,-1
+IMAGINATION,Do things that others find strange.,M,1
+IMAGINATION,Like to get lost in thought.,M,1
+IMAGINATION,Enjoy wild flights of fantasy.,M,1
+IMAGINATION,Love to daydream.,M,1
+IMAGINATION,Swim against the current.,M,1
+IMAGINATION,Take deviant positions.,M,1
+IMAGINATION,Do unexpected things.,M,1
+IMAGINATION,Do things by the book.,M,-1
+IMAGINATION,Seldom daydream.,M,-1
+IMAGINATION,Seldom get lost in thought.,M,-1
+RESERVE,Reveal little about myself.,N,1
+RESERVE,Am hard to get to know.,N,1
+RESERVE,Don't talk a lot.,N,1
+RESERVE,Bottle up my feelings.,N,1
+RESERVE,Keep my thoughts to myself.,N,1
+RESERVE,Am open about myself to others.,N,-1
+RESERVE,Am open about my feelings.,N,-1
+RESERVE,Disclose my intimate thoughts.,N,-1
+RESERVE,Show my feelings.,N,-1
+RESERVE,Am willing to talk about myself.,N,-1
+ANXIETY,Am afraid that I will do the wrong thing.,O,1
+ANXIETY,Feel threatened easily.,O,1
+ANXIETY,Am easily hurt.,O,1
+ANXIETY,Worry about things.,O,1
+ANXIETY,Spend time thinking about past mistakes.,O,1
+ANXIETY,"Feel guilty when I say ""no.""",O,1
+ANXIETY,Feel crushed by setbacks.,O,1
+ANXIETY,Don't worry about things that have already happened.,O,-1
+ANXIETY,Am not easily bothered by things.,O,-1
+ANXIETY,Don't let others discourage me.,O,-1
+COMPLEXITY,Believe in the importance of art.,Q1,1
+COMPLEXITY,Love to think up new ways of doing things.,Q1,1
+COMPLEXITY,Enjoy hearing new ideas.,Q1,1
+COMPLEXITY,Carry the conversation to a higher level.,Q1,1
+COMPLEXITY,Prefer variety to routine.,Q1,1
+COMPLEXITY,Avoid philosophical discussions.,Q1,-1
+COMPLEXITY,Rarely look for a deeper meaning in things.,Q1,-1
+COMPLEXITY,Am not interested in theoretical discussions.,Q1,-1
+COMPLEXITY,Am not interested in abstract ideas.,Q1,-1
+COMPLEXITY,Try to avoid complex people.,Q1,-1
+INTROVERSION,Want to be left alone.,Q2,1
+INTROVERSION,Prefer to do things by myself.,Q2,1
+INTROVERSION,Enjoy spending time by myself.,Q2,1
+INTROVERSION,Seek quiet.,Q2,1
+INTROVERSION,Don't mind eating alone.,Q2,1
+INTROVERSION,Enjoy silence.,Q2,1
+INTROVERSION,Enjoy my privacy.,Q2,1
+INTROVERSION,Enjoy being part of a group.,Q2,-1
+INTROVERSION,Enjoy teamwork.,Q2,-1
+INTROVERSION,Can't do without the company of others.,Q2,-1
+ORDERLINESS,"Want everything to be ""just right.""",Q3,1
+ORDERLINESS,Get chores done right away.,Q3,1
+ORDERLINESS,Like order.,Q3,1
+ORDERLINESS,Continue until everything is perfect.,Q3,1
+ORDERLINESS,Am exacting in my work.,Q3,1
+ORDERLINESS,Am not bothered by messy people.,Q3,-1
+ORDERLINESS,Am not bothered by disorder.,Q3,-1
+ORDERLINESS,Leave a mess in my room.,Q3,-1
+ORDERLINESS,Leave my belongings around.,Q3,-1
+ORDERLINESS,Put off unpleasant tasks.,Q3,-1
+EMOTIONALITY,Get irritated easily.,Q4,1
+EMOTIONALITY,Get angry easily.,Q4,1
+EMOTIONALITY,Am quick to judge others.,Q4,1
+EMOTIONALITY,Am annoyed by others' mistakes.,Q4,1
+EMOTIONALITY,Am easily put out.,Q4,1
+EMOTIONALITY,Can't stand being contradicted.,Q4,1
+EMOTIONALITY,Judge people by their appearance.,Q4,1
+EMOTIONALITY,Am not easily annoyed.,Q4,-1
+EMOTIONALITY,Try to forgive and forget.,Q4,-1
+EMOTIONALITY,Have a good word for everyone.,Q4,-1
