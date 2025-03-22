@@ -1,0 +1,16 @@
+python parser.py personality_prompting/OpenAI_MPI_ANXIETY_p2.pickle ^
+personality_prompting/OpenAI_MPI_ASSERTIVENESS_p2.pickle ^
+personality_prompting/OpenAI_MPI_COMPLEXITY_p2.pickle ^
+personality_prompting/OpenAI_MPI_DISTRUST_p2.pickle ^
+personality_prompting/OpenAI_MPI_DUTIFULNESS_p2.pickle ^
+personality_prompting/OpenAI_MPI_EMOTIONAL_STABILITY_p2.pickle ^
+personality_prompting/OpenAI_MPI_FRIENDLINESS_p2.pickle ^
+personality_prompting/OpenAI_MPI_GREGARIOUSNESS_p2.pickle ^
+personality_prompting/OpenAI_MPI_EMOTIONALITY_p2.pickle ^
+personality_prompting/OpenAI_MPI_IMAGINATION_p2.pickle ^
+personality_prompting/OpenAI_MPI_INTELLECT_p2.pickle ^
+personality_prompting/OpenAI_MPI_INTROVERSION_p2.pickle ^
+personality_prompting/OpenAI_MPI_ORDERLINESS_p2.pickle ^
+personality_prompting/OpenAI_MPI_RESERVE_p2.pickle ^
+personality_prompting/OpenAI_MPI_SENSITIVITY_p2.pickle ^
+personality_prompting/OpenAI_MPI_WARMTH_p2.pickle

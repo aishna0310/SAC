@@ -1,0 +1,47 @@
+Trait: WARMTH
+OpenAI - Mean: 3.9, Variance: 2.2900000000000005
+
+Trait: INTELLECT
+OpenAI - Mean: 4.2, Variance: 0.9600000000000002
+
+Trait: EMOTIONAL STABILITY
+OpenAI - Mean: 3.7, Variance: 2.2099999999999995
+
+Trait: ASSERTIVENESS
+OpenAI - Mean: 4.0, Variance: 0.4
+
+Trait: GREGARIOUSNESS
+OpenAI - Mean: 3.3, Variance: 1.61
+
+Trait: DUTIFULNESS
+OpenAI - Mean: 4.1, Variance: 2.49
+
+Trait: FRIENDLINESS
+OpenAI - Mean: 3.6, Variance: 3.04
+
+Trait: SENSITIVITY
+OpenAI - Mean: 3.5, Variance: 1.75
+
+Trait: DISTRUST
+OpenAI - Mean: 4.0, Variance: 0.4
+
+Trait: IMAGINATION
+OpenAI - Mean: 3.9, Variance: 1.6900000000000002
+
+Trait: RESERVE
+OpenAI - Mean: 3.6, Variance: 0.6400000000000001
+
+Trait: ANXIETY
+OpenAI - Mean: 3.8, Variance: 0.76
+
+Trait: COMPLEXITY
+OpenAI - Mean: 4.2, Variance: 0.5599999999999999
+
+Trait: INTROVERSION
+OpenAI - Mean: 3.5, Variance: 3.45
+
+Trait: ORDERLINESS
+OpenAI - Mean: 4.1, Variance: 2.49
+
+Trait: EMOTIONALITY
+OpenAI - Mean: 3.4, Variance: 0.64
