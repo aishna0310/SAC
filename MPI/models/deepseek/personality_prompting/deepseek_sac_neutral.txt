@@ -1,0 +1,47 @@
+Trait: WARMTH
+deepseek - Mean: 4.0, Variance: 1.2
+
+Trait: INTELLECT
+deepseek - Mean: 4.375, Variance: 0.234375
+
+Trait: EMOTIONAL STABILITY
+deepseek - Mean: 3.8, Variance: 1.7599999999999998
+
+Trait: ASSERTIVENESS
+deepseek - Mean: 3.8, Variance: 0.15999999999999998
+
+Trait: GREGARIOUSNESS
+deepseek - Mean: 3.3, Variance: 0.41
+
+Trait: DUTIFULNESS
+deepseek - Mean: 4.9, Variance: 0.09
+
+Trait: FRIENDLINESS
+deepseek - Mean: 3.8, Variance: 2.3600000000000003
+
+Trait: SENSITIVITY
+deepseek - Mean: 3.8, Variance: 1.36
+
+Trait: DISTRUST
+deepseek - Mean: 3.8, Variance: 0.15999999999999998
+
+Trait: IMAGINATION
+deepseek - Mean: 3.3, Variance: 0.41
+
+Trait: RESERVE
+deepseek - Mean: 3.5, Variance: 0.25
+
+Trait: ANXIETY
+deepseek - Mean: 3.5, Variance: 0.25
+
+Trait: COMPLEXITY
+deepseek - Mean: 4.2, Variance: 0.36
+
+Trait: INTROVERSION
+deepseek - Mean: 4.0, Variance: 2.4
+
+Trait: ORDERLINESS
+deepseek - Mean: 4.5, Variance: 0.25
+
+Trait: EMOTIONALITY
+deepseek - Mean: 3.4, Variance: 0.64

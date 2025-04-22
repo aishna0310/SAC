@@ -1,0 +1,47 @@
+Trait: WARMTH
+grok - Mean: 3.6, Variance: 1.8400000000000003
+
+Trait: INTELLECT
+grok - Mean: 3.6, Variance: 1.8400000000000003
+
+Trait: EMOTIONAL STABILITY
+grok - Mean: 4.4, Variance: 0.64
+
+Trait: ASSERTIVENESS
+grok - Mean: 2.9, Variance: 0.48999999999999994
+
+Trait: GREGARIOUSNESS
+grok - Mean: 2.4, Variance: 1.44
+
+Trait: DUTIFULNESS
+grok - Mean: 4.2, Variance: 2.5600000000000005
+
+Trait: FRIENDLINESS
+grok - Mean: 3.4, Variance: 3.8400000000000007
+
+Trait: SENSITIVITY
+grok - Mean: 3.2, Variance: 1.36
+
+Trait: DISTRUST
+grok - Mean: 3.6, Variance: 1.8400000000000003
+
+Trait: IMAGINATION
+grok - Mean: 3.5, Variance: 2.45
+
+Trait: RESERVE
+grok - Mean: 2.9, Variance: 2.49
+
+Trait: ANXIETY
+grok - Mean: 3.7, Variance: 1.01
+
+Trait: COMPLEXITY
+grok - Mean: 3.8, Variance: 2.16
+
+Trait: INTROVERSION
+grok - Mean: 3.4, Variance: 3.8400000000000007
+
+Trait: ORDERLINESS
+grok - Mean: 4.2, Variance: 2.5600000000000005
+
+Trait: EMOTIONALITY
+grok - Mean: 3.0, Variance: 1.6

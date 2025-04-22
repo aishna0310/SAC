@@ -1,0 +1,47 @@
+Trait: WARMTH
+gemini - Mean: 3.4, Variance: 1.44
+
+Trait: INTELLECT
+gemini - Mean: 4.0, Variance: 1.2
+
+Trait: EMOTIONAL STABILITY
+gemini - Mean: 4.2, Variance: 2.5600000000000005
+
+Trait: ASSERTIVENESS
+gemini - Mean: 3.0, Variance: 1.2
+
+Trait: GREGARIOUSNESS
+gemini - Mean: 2.7, Variance: 0.8099999999999999
+
+Trait: DUTIFULNESS
+gemini - Mean: 4.3, Variance: 0.41
+
+Trait: FRIENDLINESS
+gemini - Mean: 3.7, Variance: 1.81
+
+Trait: SENSITIVITY
+gemini - Mean: 3.0, Variance: 2.4
+
+Trait: DISTRUST
+gemini - Mean: 3.0, Variance: 1.6
+
+Trait: IMAGINATION
+gemini - Mean: 3.2, Variance: 1.9600000000000002
+
+Trait: RESERVE
+gemini - Mean: 3.1, Variance: 1.09
+
+Trait: ANXIETY
+gemini - Mean: 3.8, Variance: 0.15999999999999998
+
+Trait: COMPLEXITY
+gemini - Mean: 3.4, Variance: 0.44000000000000006
+
+Trait: INTROVERSION
+gemini - Mean: 3.4, Variance: 3.2400000000000007
+
+Trait: ORDERLINESS
+gemini - Mean: 3.4, Variance: 2.64
+
+Trait: EMOTIONALITY
+gemini - Mean: 2.8, Variance: 1.36

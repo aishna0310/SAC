@@ -1,0 +1,47 @@
+Trait: WARMTH
+claude - Mean: 3.2, Variance: 0.9600000000000002
+
+Trait: INTELLECT
+claude - Mean: 3.6, Variance: 1.8400000000000003
+
+Trait: EMOTIONAL STABILITY
+claude - Mean: 3.3, Variance: 1.41
+
+Trait: ASSERTIVENESS
+claude - Mean: 3.3, Variance: 0.61
+
+Trait: GREGARIOUSNESS
+claude - Mean: 3.1, Variance: 1.09
+
+Trait: DUTIFULNESS
+claude - Mean: 3.8, Variance: 0.76
+
+Trait: FRIENDLINESS
+claude - Mean: 3.2, Variance: 0.9600000000000002
+
+Trait: SENSITIVITY
+claude - Mean: 3.2, Variance: 1.1600000000000001
+
+Trait: DISTRUST
+claude - Mean: 3.8, Variance: 0.15999999999999998
+
+Trait: IMAGINATION
+claude - Mean: 3.5, Variance: 0.65
+
+Trait: RESERVE
+claude - Mean: 3.4, Variance: 0.44000000000000006
+
+Trait: ANXIETY
+claude - Mean: 3.5, Variance: 0.25
+
+Trait: COMPLEXITY
+claude - Mean: 3.5, Variance: 1.85
+
+Trait: INTROVERSION
+claude - Mean: 3.0, Variance: 2.8
+
+Trait: ORDERLINESS
+claude - Mean: 3.9, Variance: 0.89
+
+Trait: EMOTIONALITY
+claude - Mean: 3.2, Variance: 0.9600000000000002

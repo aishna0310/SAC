@@ -1,0 +1,199 @@
+==================================================
+Processing: ANXIETY at intensity 1
+==================================================
+
+Results for ANXIETY at intensity 1:
+Trait: WARMTH, Mean: 2.8, Variance: 0.15999999999999998
+Trait: INTELLECT, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: EMOTIONAL STABILITY, Mean: 3.2666666666666666, Variance: 2.5955555555555554
+Trait: ASSERTIVENESS, Mean: 2.933333333333333, Variance: 0.06222222222222222
+Trait: GREGARIOUSNESS, Mean: 2.533333333333333, Variance: 0.38222222222222235
+Trait: DUTIFULNESS, Mean: 2.933333333333333, Variance: 0.19555555555555554
+Trait: FRIENDLINESS, Mean: 2.8666666666666667, Variance: 1.3155555555555551
+Trait: SENSITIVITY, Mean: 2.6666666666666665, Variance: 0.48888888888888904
+Trait: DISTRUST, Mean: 1.9333333333333333, Variance: 0.46222222222222226
+Trait: IMAGINATION, Mean: 3.066666666666667, Variance: 0.1955555555555555
+Trait: RESERVE, Mean: 2.3333333333333335, Variance: 0.6222222222222223
+Trait: ANXIETY, Mean: 1.0, Variance: 0.0
+Trait: COMPLEXITY, Mean: 2.8666666666666667, Variance: 0.24888888888888897
+Trait: INTROVERSION, Mean: 2.8666666666666667, Variance: 0.11555555555555551
+Trait: ORDERLINESS, Mean: 2.933333333333333, Variance: 0.06222222222222222
+Trait: EMOTIONALITY, Mean: 1.4666666666666666, Variance: 0.38222222222222235
+
+==================================================
+Processing: ANXIETY at intensity 3
+==================================================
+
+Results for ANXIETY at intensity 3:
+Trait: WARMTH, Mean: 3.0, Variance: 0.0
+Trait: INTELLECT, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: EMOTIONAL STABILITY, Mean: 3.1333333333333333, Variance: 0.11555555555555556
+Trait: ASSERTIVENESS, Mean: 3.0, Variance: 0.0
+Trait: GREGARIOUSNESS, Mean: 3.0, Variance: 0.0
+Trait: DUTIFULNESS, Mean: 3.2666666666666666, Variance: 0.1955555555555556
+Trait: FRIENDLINESS, Mean: 3.0, Variance: 0.0
+Trait: SENSITIVITY, Mean: 3.0, Variance: 0.0
+Trait: DISTRUST, Mean: 3.0, Variance: 0.0
+Trait: IMAGINATION, Mean: 3.1333333333333333, Variance: 0.11555555555555556
+Trait: RESERVE, Mean: 3.0, Variance: 0.0
+Trait: ANXIETY, Mean: 3.0, Variance: 0.0
+Trait: COMPLEXITY, Mean: 3.0, Variance: 0.0
+Trait: INTROVERSION, Mean: 3.1333333333333333, Variance: 0.11555555555555556
+Trait: ORDERLINESS, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: EMOTIONALITY, Mean: 3.0, Variance: 0.0
+
+==================================================
+Processing: ANXIETY at intensity 5
+==================================================
+
+Results for ANXIETY at intensity 5:
+Trait: WARMTH, Mean: 3.0, Variance: 0.0
+Trait: INTELLECT, Mean: 3.6666666666666665, Variance: 0.2222222222222222
+Trait: EMOTIONAL STABILITY, Mean: 2.8, Variance: 2.1599999999999997
+Trait: ASSERTIVENESS, Mean: 2.7333333333333334, Variance: 0.4622222222222223
+Trait: GREGARIOUSNESS, Mean: 2.4, Variance: 0.7733333333333334
+Trait: DUTIFULNESS, Mean: 3.8, Variance: 0.15999999999999998
+Trait: FRIENDLINESS, Mean: 2.8666666666666667, Variance: 1.448888888888889
+Trait: SENSITIVITY, Mean: 3.0, Variance: 0.0
+Trait: DISTRUST, Mean: 3.4, Variance: 0.2400000000000001
+Trait: IMAGINATION, Mean: 3.4, Variance: 0.24000000000000005
+Trait: RESERVE, Mean: 3.7333333333333334, Variance: 0.1955555555555556
+Trait: ANXIETY, Mean: 5.0, Variance: 0.0
+Trait: COMPLEXITY, Mean: 3.2666666666666666, Variance: 0.32888888888888873
+Trait: INTROVERSION, Mean: 3.8, Variance: 0.15999999999999998
+Trait: ORDERLINESS, Mean: 3.7333333333333334, Variance: 0.46222222222222226
+Trait: EMOTIONALITY, Mean: 3.8, Variance: 0.6933333333333335
+
+==================================================
+Processing: ASSERTIVENESS at intensity 1
+==================================================
+
+Results for ASSERTIVENESS at intensity 1:
+Trait: WARMTH, Mean: 2.6666666666666665, Variance: 0.48888888888888904
+Trait: INTELLECT, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: EMOTIONAL STABILITY, Mean: 2.8666666666666667, Variance: 0.3822222222222223
+Trait: ASSERTIVENESS, Mean: 1.0, Variance: 0.0
+Trait: GREGARIOUSNESS, Mean: 2.1333333333333333, Variance: 0.5155555555555555
+Trait: DUTIFULNESS, Mean: 3.066666666666667, Variance: 0.19555555555555545
+Trait: FRIENDLINESS, Mean: 2.2666666666666666, Variance: 0.7288888888888891
+Trait: SENSITIVITY, Mean: 2.7333333333333334, Variance: 0.3288888888888888
+Trait: DISTRUST, Mean: 2.2666666666666666, Variance: 0.3288888888888889
+Trait: IMAGINATION, Mean: 3.066666666666667, Variance: 0.19555555555555545
+Trait: RESERVE, Mean: 3.6666666666666665, Variance: 1.1555555555555554
+Trait: ANXIETY, Mean: 3.1333333333333333, Variance: 0.11555555555555554
+Trait: COMPLEXITY, Mean: 2.4, Variance: 0.7733333333333332
+Trait: INTROVERSION, Mean: 3.2666666666666666, Variance: 0.19555555555555557
+Trait: ORDERLINESS, Mean: 3.0, Variance: 0.0
+Trait: EMOTIONALITY, Mean: 2.3333333333333335, Variance: 0.6222222222222222
+
+==================================================
+Processing: ASSERTIVENESS at intensity 3
+==================================================
+
+Results for ASSERTIVENESS at intensity 3:
+Trait: WARMTH, Mean: 3.0, Variance: 0.0
+Trait: INTELLECT, Mean: 3.1333333333333333, Variance: 0.11555555555555556
+Trait: EMOTIONAL STABILITY, Mean: 3.066666666666667, Variance: 0.1955555555555555
+Trait: ASSERTIVENESS, Mean: 3.0, Variance: 0.0
+Trait: GREGARIOUSNESS, Mean: 3.0, Variance: 0.0
+Trait: DUTIFULNESS, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: FRIENDLINESS, Mean: 2.933333333333333, Variance: 0.06222222222222222
+Trait: SENSITIVITY, Mean: 3.0, Variance: 0.0
+Trait: DISTRUST, Mean: 3.0, Variance: 0.0
+Trait: IMAGINATION, Mean: 3.1333333333333333, Variance: 0.11555555555555556
+Trait: RESERVE, Mean: 3.0, Variance: 0.0
+Trait: ANXIETY, Mean: 2.933333333333333, Variance: 0.06222222222222222
+Trait: COMPLEXITY, Mean: 3.0, Variance: 0.0
+Trait: INTROVERSION, Mean: 3.2, Variance: 0.16
+Trait: ORDERLINESS, Mean: 3.1333333333333333, Variance: 0.11555555555555556
+Trait: EMOTIONALITY, Mean: 2.933333333333333, Variance: 0.06222222222222222
+
+==================================================
+Processing: ASSERTIVENESS at intensity 5
+==================================================
+
+Results for ASSERTIVENESS at intensity 5:
+Trait: WARMTH, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: INTELLECT, Mean: 3.4, Variance: 0.37333333333333335
+Trait: EMOTIONAL STABILITY, Mean: 3.7333333333333334, Variance: 0.7288888888888891
+Trait: ASSERTIVENESS, Mean: 4.466666666666667, Variance: 1.8488888888888886
+Trait: GREGARIOUSNESS, Mean: 3.1333333333333333, Variance: 0.2488888888888889
+Trait: DUTIFULNESS, Mean: 3.2666666666666666, Variance: 0.1955555555555556
+Trait: FRIENDLINESS, Mean: 3.2, Variance: 0.15999999999999998
+Trait: SENSITIVITY, Mean: 2.933333333333333, Variance: 0.06222222222222222
+Trait: DISTRUST, Mean: 3.0, Variance: 0.0
+Trait: IMAGINATION, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: RESERVE, Mean: 1.8666666666666667, Variance: 1.7155555555555557
+Trait: ANXIETY, Mean: 1.8666666666666667, Variance: 0.38222222222222224
+Trait: COMPLEXITY, Mean: 3.2666666666666666, Variance: 0.3288888888888889
+Trait: INTROVERSION, Mean: 3.4, Variance: 0.5066666666666667
+Trait: ORDERLINESS, Mean: 3.6666666666666665, Variance: 0.48888888888888904
+Trait: EMOTIONALITY, Mean: 2.466666666666667, Variance: 0.248888888888889
+
+==================================================
+Processing: COMPLEXITY at intensity 1
+==================================================
+
+Results for COMPLEXITY at intensity 1:
+Trait: WARMTH, Mean: 2.533333333333333, Variance: 0.648888888888889
+Trait: INTELLECT, Mean: 1.0666666666666667, Variance: 0.06222222222222224
+Trait: EMOTIONAL STABILITY, Mean: 2.6, Variance: 1.04
+Trait: ASSERTIVENESS, Mean: 2.7333333333333334, Variance: 0.46222222222222203
+Trait: GREGARIOUSNESS, Mean: 2.0, Variance: 0.8
+Trait: DUTIFULNESS, Mean: 2.933333333333333, Variance: 0.06222222222222222
+Trait: FRIENDLINESS, Mean: 2.6, Variance: 0.5066666666666667
+Trait: SENSITIVITY, Mean: 2.1333333333333333, Variance: 0.9155555555555556
+Trait: DISTRUST, Mean: 1.5333333333333334, Variance: 0.5155555555555555
+Trait: IMAGINATION, Mean: 1.7333333333333334, Variance: 0.5955555555555557
+Trait: RESERVE, Mean: 2.066666666666667, Variance: 0.8622222222222221
+Trait: ANXIETY, Mean: 1.8666666666666667, Variance: 0.9155555555555556
+Trait: COMPLEXITY, Mean: 1.0, Variance: 0.0
+Trait: INTROVERSION, Mean: 2.6666666666666665, Variance: 0.48888888888888904
+Trait: ORDERLINESS, Mean: 2.6666666666666665, Variance: 0.8888888888888888
+Trait: EMOTIONALITY, Mean: 1.3333333333333333, Variance: 0.22222222222222227
+
+==================================================
+Processing: COMPLEXITY at intensity 3
+==================================================
+
+Results for COMPLEXITY at intensity 3:
+Trait: WARMTH, Mean: 3.0, Variance: 0.0
+Trait: INTELLECT, Mean: 3.0, Variance: 0.0
+Trait: EMOTIONAL STABILITY, Mean: 2.933333333333333, Variance: 0.19555555555555545
+Trait: ASSERTIVENESS, Mean: 3.0, Variance: 0.0
+Trait: GREGARIOUSNESS, Mean: 3.0, Variance: 0.0
+Trait: DUTIFULNESS, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: FRIENDLINESS, Mean: 2.933333333333333, Variance: 0.06222222222222222
+Trait: SENSITIVITY, Mean: 3.0, Variance: 0.0
+Trait: DISTRUST, Mean: 3.0, Variance: 0.0
+Trait: IMAGINATION, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: RESERVE, Mean: 3.0, Variance: 0.0
+Trait: ANXIETY, Mean: 3.0, Variance: 0.0
+Trait: COMPLEXITY, Mean: 3.0, Variance: 0.0
+Trait: INTROVERSION, Mean: 3.0, Variance: 0.0
+Trait: ORDERLINESS, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: EMOTIONALITY, Mean: 3.0, Variance: 0.0
+
+==================================================
+Processing: COMPLEXITY at intensity 5
+==================================================
+
+Results for COMPLEXITY at intensity 5:
+Trait: WARMTH, Mean: 3.2, Variance: 0.15999999999999998
+Trait: INTELLECT, Mean: 5.0, Variance: 0.0
+Trait: EMOTIONAL STABILITY, Mean: 3.533333333333333, Variance: 0.9155555555555556
+Trait: ASSERTIVENESS, Mean: 3.466666666666667, Variance: 0.3822222222222223
+Trait: GREGARIOUSNESS, Mean: 3.0, Variance: 0.0
+Trait: DUTIFULNESS, Mean: 3.3333333333333335, Variance: 0.3555555555555557
+Trait: FRIENDLINESS, Mean: 3.0, Variance: 0.0
+Trait: SENSITIVITY, Mean: 3.0, Variance: 0.0
+Trait: DISTRUST, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: IMAGINATION, Mean: 4.4, Variance: 0.64
+Trait: RESERVE, Mean: 3.066666666666667, Variance: 0.06222222222222222
+Trait: ANXIETY, Mean: 3.0, Variance: 0.0
+Trait: COMPLEXITY, Mean: 5.0, Variance: 0.0
+Trait: INTROVERSION, Mean: 3.2666666666666666, Variance: 0.19555555555555557
+Trait: ORDERLINESS, Mean: 3.933333333333333, Variance: 0.5955555555555555
+Trait: EMOTIONALITY, Mean: 3.0, Variance: 0.0
+
+==================================================

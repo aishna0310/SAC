@@ -1,4 +1,7 @@
+import openai
+import anthropic
 import google.generativeai as genai
+import requests
 import pandas as pd
 import pickle
 from tqdm import tqdm
@@ -7,10 +10,18 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-genai.configure(api_key = os.getenv("GEMINI_API_KEY"))
 
 
-ITEMPATH = r"..\..\..\inventories\MPI_Modified - 16PF_Inventory.csv" #load new dataset
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key = os.environ["OPENROUTER_API_KEY"],
+)
+
+
+# Set up API keys
+ITEMPATH = r"..\..\..\MPI_Modified - 16PF_Inventory.csv"  # Load the 16 PF inventory
 TEST_TYPE = None
 LABEL_TYPE = None
 
@@ -40,38 +51,34 @@ Options:
 Answer:"""
 
 #generates a pickle file for each trait in P2 prompting
-# Function for Gemini API call
+# Function for gemini API call
 def gemini_inventory(prompt, dim, aux):
     dataset = getItems(ITEMPATH, TEST_TYPE)
-    batch_size = 4
+    batch_size = 1
     result = []
-    #genai.configure(api_key=gemini_api_key)
-    genai.configure(api_key = os.getenv("GEMINI_API_KEY"))
-    model = genai.GenerativeModel('gemini-2.0-flash-lite')
     
-    for i in tqdm(range(0, len(dataset), batch_size), desc="Gemini Progress"):
+    for i in tqdm(range(0, len(dataset), batch_size), desc="gemini Progress"):
         batch = dataset[i : i + batch_size]
         questions = [
             template.format(prompt=prompt, item=item["text"].lower())
             for _, item in batch.iterrows()
         ]
+        messages=[
+            {"role": "system", "content": "You are an assistant that helps answer questions about personality traits."},
+            {"role": "user", "content": prompt}
+        ]
         
-        for j, question in enumerate(questions):
-            try:
-                response = model.generate_content(
-                    question,
-                    generation_config=genai.types.GenerationConfig(
-                        temperature=0.0,
-                        max_output_tokens=100,
-                        top_p=0.95,
-                    )
-                )
-                result.append((batch.iloc[j], question, response))
-            except Exception as e:
-                print(f"Error with Gemini API: {e}")
-                continue
+        try:
+            responses = client.chat.completions.create(
+            model="google/gemini-2.5-flash-preview",
+            messages=messages
+        )
+            for j, response in enumerate(responses.choices):
+                result.append((batch.iloc[j], questions[j], response))
+        except Exception as e:
+            print(f"Error with gemini API: {e}")
+            continue
 
-    filename = f"Gemini_MPI_{dim}_{aux}.pickle"
+    filename = f"gemini_MPI_{dim}_{aux}.pickle"
     with open(filename, "wb+") as f:
         pickle.dump(result, f)
-

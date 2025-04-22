@@ -65,7 +65,14 @@ all_results = load_results(RESULT_FILE)
 
 for question in all_results:
     res = question[2].message.content + ')'
-    choice = re.search(r'[abcdeABCDE][^a-zA-Z]', res, flags = 0).group()[0].upper()
+    
+    match = re.search(r'[abcdeABCDE][^a-zA-Z]', res)
+    if match:
+        choice = match.group()[0].upper()
+    else:
+        print(f"No match found in question with key {question[0]['key']}: {res}")
+        continue  # or handle it differently if needed
+
     count[choice] += 1
     label = question[0]['label_16_pf']
     label_raw = question[0]['label_raw']
@@ -76,6 +83,7 @@ for question in all_results:
         traits[label].append(score)
     else:
         traits[label].append(6 - score)
+
 
 print(calc_mean_and_var(traits))
 

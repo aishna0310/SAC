@@ -1,13 +1,20 @@
-import requests
+import openai
 import pandas as pd
 import pickle
 import os
+import time
 
-# Set up DeepSeek API key
-DEEPSEEK_API_KEY = os.environ["DEEPSEEK_API_KEY"]
-API_URL = "https://api.deepseek.com/v1/chat/completions"
+from dotenv import load_dotenv
+load_dotenv()
 
-ITEMPATH = r"..\inventories\MPI_Modified - 16PF_Inventory.csv"  # Load the 16 PF inventory
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.environ["OPENROUTER_API_KEY"],
+)
+
+ITEMPATH = r"..\..\MPI_Modified - 16PF_Inventory.csv"  # Load the 16 PF inventory
 TEST_TYPE = None
 LABEL_TYPE = None
 
@@ -23,53 +30,57 @@ template = """Question:
 Given a statement of you: "You {}."
 Please choose from the following options to identify how accurately this statement describes you.
 Options:
-(A). Very Accurate
-(B). Moderately Accurate
-(C). Neither Accurate Nor Inaccurate
-(D). Moderately Inaccurate
-(E). Very Inaccurate
+A. Very Accurate
+B. Moderately Accurate
+C. Neither Accurate Nor Inaccurate
+D. Moderately Inaccurate
+E. Very Inaccurate
 
+IMPORTANT: only answer using the Letter of the option, do not include any other text. Limit yourself to only letters A,B,C,D,E corresponding to the options given
 Answer:"""
 
 dataset = getItems(ITEMPATH, TEST_TYPE)
 
-batch_size = 1
-result = []
+for temperature in [0]:
+    batch_size = 1
+    result = []
+    for i in range(0, len(dataset), batch_size):
+        batch = dataset[i : i + batch_size]
+        
+        # Build all question prompts for this batch
+        questions = [
+            template.format(item["text"].lower()) for _, item in batch.iterrows()
+        ]
+        
+        # Create your initial messages list (which can contain system or user instructions)
+        messages = [
+            {
+                "role": "user",
+                "content": "You are an assistant that answers questions about your own personality traits."
+            }
+        ]
+        
+        # Add each question to the `messages` list
+        for question in questions:
+            messages.append({"role": "user", "content": question})
+        
+        # Now call the chat completion with the messages
+        completion = client.chat.completions.create(
+            model="deepseek/deepseek-chat-v3-0324",
+            messages=messages
+        )
 
-for i in range(0, len(dataset), batch_size):
-    batch = dataset[i : i + batch_size]
-    questions = [template.format(item["text"].lower()) for _, item in batch.iterrows()]
-
-    messages = [
-        {"role": "system", "content": "You are an assistant that helps answer questions about personality traits."}
-    ]
-
-    for question in questions:
-        messages.append({"role": "user", "content": question})
-
-    # DeepSeek API request
-    response = requests.post(
-        API_URL,
-        headers={"Authorization": f"Bearer {DEEPSEEK_API_KEY}", "Content-Type": "application/json"},
-        json={
-            "model": "deepseek-chat",  # Change if using a different DeepSeek model
-            "messages": messages,
-            "temperature": 0,
-            "max_tokens": 400
-        }
-    )
-
-    response_data = response.json()
-
-    if "choices" in response_data and len(response_data["choices"]) > 0:
-        answer_text = response_data["choices"][0]["message"]["content"]
-    else:
-        answer_text = "Error: No response"
-
-    for j, item in enumerate(batch.itertuples(index=False)):
-        result.append((item, questions[j], answer_text))
-        print(answer_text, item.label_16_pf)
-
-# Save results
-with open("deepseek-neutral-path-to-save.pickle", "wb+") as f:
-    pickle.dump(result, f)
+        # If this call returns N=1 choice, you will typically have only `completion.choices[0]`.
+        # If you need separate completions per question, you can either:
+        #   (1) Make multiple calls (one per question), or
+        #   (2) Use `completion.choices` if your call is returning multiple completions.
+        
+        # For now, just handle the single typical answer:
+        for j, response in enumerate(completion.choices):
+            # Save the result
+            result.append((batch.iloc[j], questions[j], response))
+            print(response.message.content)
+            
+    # Save the entire result list for all processed items
+    with open("deepseek-neutral-path-to-save.pickle", "wb+") as f:
+        pickle.dump(result, f)

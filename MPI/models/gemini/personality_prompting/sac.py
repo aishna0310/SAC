@@ -1,17 +1,29 @@
-import google.generativeai as genai
+import openai
 import os
 import pandas as pd
 import numpy as np
+import re
 from consts import personality_intensity_dict, p2_descriptions
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Set up API keys
-gemini_api_key = os.environ["GEMINI_API_KEY"]
+# openai.api_key = os.environ["OPENAI_API_KEY"]
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key = os.environ["OPENROUTER_API_KEY"],
+)
+
 #this file adds the adjectives from intensity and then calculates you would first run sac_scoring then sac 
 
 
 # Load the CSV files
-traits_df = pd.read_csv("../inventories/MPI_Modified - 16_Intensity_Questions.csv")  # Load 16 intensity questions
-intensity_df = pd.read_csv("../inventories/MPI_Modified - 16_Intensity_Questions.csv")  # Load intensity template
+traits_df = pd.read_csv("../../../MPI_Modified - 16_Intensity_Questions.csv")  # Load 16 intensity questions
+intensity_df = pd.read_csv("../../../MPI_Modified - Intensity_Template.csv")  # Load intensity template
 
 # Function to build the prompt with dynamic intensity
 #might have to make new templates for each model - handle during testing
@@ -62,16 +74,82 @@ def build_prompt(trait_const, trait, question, intensity_question, intensity_ans
 # Function to call the OpenAI API for a given prompt
 
 def get_response_gemini(prompt):
-    genai.configure(api_key=gemini_api_key)
-    model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content(prompt)
-    return response.text.strip()
+    messages=[
+            {"role": "system", "content": "You are an assistant that helps answer questions about personality traits."},
+            {"role": "user", "content": prompt}
+        ]
+    completion = client.chat.completions.create(
+            model="google/gemini-2.5-flash-preview",
+            messages=messages
+        )
+    
+    return completion.choices[0].message.content.strip()
+
+def extract_number(s):
+    match = re.search(r"[-+]?\d*\.\d+|[-+]?\d+", str(s))  # float or int
+    if match:
+        # print(f"Found number: {match.group()}")
+        return float(match.group())
+    else:
+        print(s)
+        return 3.0
 
 # Process responses for each model
-def process_results_for_model(model_name, response_function):
+# def process_results_for_model(model_name, response_function):
+#     results = {}
+#     trait_const = "EMOTIONALITY"
+#     intensity = 5
+    
+#     for index, row in traits_df.iterrows():
+#         trait = row['Personality']
+#         question_1 = row['Question1']
+#         question_2 = row['Question2']
+#         question_3 = row['Question3']
+        
+#         for i, intensity_row in intensity_df.iterrows():
+#             intensity_question = intensity_row['Question']
+#             intensity_answers = intensity_row[['1', '2', '3', '4', '5']].tolist()
+            
+#             prompt_1 = build_prompt(trait_const, trait, question_1, intensity_question, intensity_answers, intensity_scale=intensity)
+#             prompt_2 = build_prompt(trait_const, trait, question_2, intensity_question, intensity_answers, intensity_scale=intensity)
+#             prompt_3 = build_prompt(trait_const, trait, question_3, intensity_question, intensity_answers, intensity_scale=intensity)
+                
+#             try:
+#                 response_1 = response_function(prompt_1)
+#                 response_2 = response_function(prompt_2)
+#                 response_3 = response_function(prompt_3)
+                
+#                 score_1 = float(response_1)
+#                 score_2 = float(response_2)
+#                 score_3 = float(response_3)
+                
+#                 if trait not in results:
+#                     results[trait] = []
+#                 results[trait].extend([score_1, score_2, score_3])
+#             except Exception as e:
+#                 print(f"Error processing {model_name} response for trait {trait}: {e}")
+    
+#     # Calculate statistics
+#     summary_stats = {}
+#     for trait, scores in results.items():
+#         mean_score = np.mean(scores)
+#         variance_score = np.var(scores)
+#         summary_stats[trait] = {'mean': mean_score, 'variance': variance_score}
+    
+#     return summary_stats
+
+# # Run the process for each model - comment out whatever is not necessary
+# gemini_stats = process_results_for_model("gemini", get_response_gemini)
+
+# # Output results for gemini
+# print("\ngemini Results:")
+# for trait, stats in gemini_stats.items():
+#     print(f"Trait: {trait}, Mean: {stats['mean']}, Variance: {stats['variance']}")
+
+
+# Process responses for each model
+def process_results_for_model(model_name, response_function, trait_const, intensity_level):
     results = {}
-    trait_const = "EMOTIONALITY"
-    intensity = 5
     
     for index, row in traits_df.iterrows():
         trait = row['Personality']
@@ -83,19 +161,22 @@ def process_results_for_model(model_name, response_function):
             intensity_question = intensity_row['Question']
             intensity_answers = intensity_row[['1', '2', '3', '4', '5']].tolist()
             
-            prompt_1 = build_prompt(trait_const, trait, question_1, intensity_question, intensity_answers, intensity_scale=intensity)
-            prompt_2 = build_prompt(trait_const, trait, question_2, intensity_question, intensity_answers, intensity_scale=intensity)
-            prompt_3 = build_prompt(trait_const, trait, question_3, intensity_question, intensity_answers, intensity_scale=intensity)
+            prompt_1 = build_prompt(trait_const, trait, question_1, intensity_question, intensity_answers, intensity_scale=intensity_level)
+            prompt_2 = build_prompt(trait_const, trait, question_2, intensity_question, intensity_answers, intensity_scale=intensity_level)
+            prompt_3 = build_prompt(trait_const, trait, question_3, intensity_question, intensity_answers, intensity_scale=intensity_level)
                 
             try:
                 response_1 = response_function(prompt_1)
                 response_2 = response_function(prompt_2)
                 response_3 = response_function(prompt_3)
                 
-                score_1 = float(response_1)
-                score_2 = float(response_2)
-                score_3 = float(response_3)
-                
+                score_1 = extract_number(response_1)
+                # print(score_1)
+                score_2 = extract_number(response_2)
+                # print(score_2)
+                score_3 = extract_number(response_3)
+                # print(score_3)
+
                 if trait not in results:
                     results[trait] = []
                 results[trait].extend([score_1, score_2, score_3])
@@ -111,28 +192,30 @@ def process_results_for_model(model_name, response_function):
     
     return summary_stats
 
-# Run the process for each model - comment out whatever is not necessary
-gemini_stats = process_results_for_model("Gemini", get_response_gemini) 
+# List of all 16 traits
+all_traits = [
+    "ANXIETY", "ASSERTIVENESS", "COMPLEXITY"
+    # , 
+    # "DISTRUST", 
+    # "DUTIFULNESS", "EMOTIONAL STABILITY", "FRIENDLINESS", "GREGARIOUSNESS",
+    # "EMOTIONALITY", "IMAGINATION", "INTELLECT", "INTROVERSION",
+    # "ORDERLINESS", "RESERVE", "SENSITIVITY", "WARMTH"
+]
 
-# Output results for OpenAI
-# Output results for Gemini
-print("\nGemini Results:")
-for trait, stats in gemini_stats.items():
-    print(f"Trait: {trait}, Mean: {stats['mean']}, Variance: {stats['variance']}")
+# Intensities to test
+intensities = [1, 3, 5]
 
-# # Print comparison of results across models
-# for trait in traits_df['Personality'].unique():
-#     print(f"\nTrait: {trait}")
-#     if trait in openai_stats:
-#         print(f"OpenAI - Mean: {openai_stats[trait]['mean']}, Variance: {openai_stats[trait]['variance']}")
-#     if trait in claude_stats:
-#         print(f"Claude - Mean: {claude_stats[trait]['mean']}, Variance: {claude_stats[trait]['variance']}")
-#     if trait in gemini_stats:
-#         print(f"Gemini - Mean: {gemini_stats[trait]['mean']}, Variance: {gemini_stats[trait]['variance']}")
-#     if trait in deepseek_stats:
-#         print(f"DeepSeek - Mean: {deepseek_stats[trait]['mean']}, Variance: {deepseek_stats[trait]['variance']}")
-
-
-# # Output the results
-# for trait, stats in summary_stats.items():
-#     print(f"Trait: {trait}, Mean: {stats['mean']}, Variance: {stats['variance']}")
+# Run for all traits and intensities
+for trait_const in all_traits:
+    for intensity in intensities:
+        print(f"\n{'='*50}")
+        print(f"Processing: {trait_const} at intensity {intensity}")
+        print(f"{'='*50}")
+        
+        # Run the process
+        gemini_stats = process_results_for_model("gemini", get_response_gemini, trait_const, intensity)
+        
+        # Output results
+        print(f"\nResults for {trait_const} at intensity {intensity}:")
+        for trait, stats in gemini_stats.items():
+            print(f"Trait: {trait}, Mean: {stats['mean']}, Variance: {stats['variance']}")

@@ -64,9 +64,13 @@ def calc_mean_and_var(result):
 all_results = load_results(RESULT_FILE)
 
 for question in all_results:
-    #res needs to change in every parser depending upon model
-    res = question[2] + ')'
-    choice = re.search(r'[abcdeABCDE][^a-zA-Z]', res, flags = 0).group()[0].upper()
+    res = question[2].message.content + ')'
+    match = re.search(r'[abcdeABCDE][^a-zA-Z]', res, flags = 0)
+    if match is None:
+        print(f"WARNING: Could not find a valid choice in response: {res[:50]}...")
+        choice = 'UNK'  # Default to 'C' (midpoint)
+    else:
+        choice = match.group()[0].upper()
     count[choice] += 1
     label = question[0]['label_16_pf']
     label_raw = question[0]['label_raw']
