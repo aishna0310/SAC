@@ -52,6 +52,34 @@ SCORES = {
     "E" : 1 ,
 }
 
+def extract_option(text):
+    """
+    Extract option letter (A-E) from text.
+    Tries multiple patterns in order of specificity.
+    """
+    print(text[:100]) # Print the first 100 characters of the text for debugging
+    # Pattern 1: "option (X)" or "option X" format
+    match = re.search(r'option\s*\(?([A-E])\)?', text, re.IGNORECASE)
+    if match:
+        return match.group(1).upper()
+    
+    # Pattern 2: "(X)" where X is A-E
+    match = re.search(r'\(([A-E])\)', text, re.IGNORECASE)
+    if match:
+        return match.group(1).upper()
+    
+    # Pattern 3: Standalone letter followed by non-letter or end of string
+    match = re.search(r'\b([A-E])(?:[^a-zA-Z]|$)', text, re.IGNORECASE)
+    if match:
+        return match.group(1).upper()
+    
+    # Pattern 4: Letter at start of line followed by non-letter
+    match = re.search(r'^([A-E])[^a-zA-Z]', text, re.IGNORECASE | re.MULTILINE)
+    if match:
+        return match.group(1).upper()
+    
+    return None
+
 def calc_mean_and_var(result):
     mean  = {}
     std  = {}
@@ -65,7 +93,12 @@ all_results = load_results(RESULT_FILE)
 
 for question in all_results:
     res = question[2] + ')'
-    choice = re.search(r'[abcdeABCDE][^a-zA-Z]', res, flags = 0).group()[0].upper()
+    # choice = re.search(r'[abcdeABCDE][^a-zA-Z]', res, flags = 0).group()[0].upper()
+    choice = extract_option(res)
+    if choice is None:
+        choice = 'UNK'
+        print(f"Warning: Could not extract choice from: {res[:100]}...")
+    print(choice)
     count[choice] += 1
     label = question[0]['label_16_pf']
     label_raw = question[0]['label_raw']
