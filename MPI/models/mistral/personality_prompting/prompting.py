@@ -1,5 +1,4 @@
-import openai
-from worker import gemini_inventory
+from worker import mistral_inventory
 from dotenv import load_dotenv
 from consts import (
     vignettes, #dont need vignettes
@@ -15,8 +14,6 @@ import os
 import json
 
 load_dotenv()
-# Set up API keys
-openai_api_key = os.environ["OPENAI_API_KEY"]
 
 def get_p2_descriptions():
     words_template = """Given some key words of {trait} person: {d1}, {d2}, {d3}, {d4}, {d5}, and {d6}. A second-person view of {trait} person:"""
@@ -72,7 +69,7 @@ def get_p2_descriptions_negative():
 def get_inventory_result(prompts, aux=""):
     for trait, prompt in prompts.items():
         print(trait)
-        gemini_inventory(prompt, trait, aux)
+        mistral_inventory(prompt, trait, aux)
         #comment out the ones not in use
 
 

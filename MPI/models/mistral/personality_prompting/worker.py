@@ -1,7 +1,4 @@
-import openai
-import anthropic
-import google.generativeai as genai
-import requests
+import ollama
 import pandas as pd
 import pickle
 from tqdm import tqdm
@@ -11,17 +8,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key = os.environ["OPENROUTER_API_KEY"],
-)
-
-
 # Set up API keys
-ITEMPATH = r"..\..\..\MPI_Modified - 16PF_Inventory.csv"  # Load the 16 PF inventory
+ITEMPATH = r"~/SAC-1/MPI/MPI_Modified - 16PF_Inventory.csv"  # Load the 16 PF inventory
 TEST_TYPE = None
 LABEL_TYPE = None
 
@@ -52,33 +40,37 @@ Answer:"""
 
 #generates a pickle file for each trait in P2 prompting
 # Function for gemini API call
-def gemini_inventory(prompt, dim, aux):
+def mistral_inventory(prompt, dim, aux):
     dataset = getItems(ITEMPATH, TEST_TYPE)
     batch_size = 1
     result = []
     
-    for i in tqdm(range(0, len(dataset), batch_size), desc="gemini Progress"):
+    for i in tqdm(range(0, len(dataset), batch_size), desc="mistral Progress"):
         batch = dataset[i : i + batch_size]
         questions = [
-            template.format(prompt=prompt, item=item["text"].lower())
-            for _, item in batch.iterrows()
-        ]
-        messages=[
-            {"role": "system", "content": "You are an assistant that helps answer questions about personality traits."},
-            {"role": "user", "content": prompt}
-        ]
-        
-        try:
-            responses = client.chat.completions.create(
-            model="google/gemini-2.5-flash-preview",
-            messages=messages
-        )
-            for j, response in enumerate(responses.choices):
-                result.append((batch.iloc[j], questions[j], response))
-        except Exception as e:
-            print(f"Error with gemini API: {e}")
-            continue
+        template.format(prompt=prompt, item=item["text"].lower())
+        for _, item in batch.iterrows()
+    ]
 
-    filename = f"gemini_MPI_{dim}_{aux}.pickle"
+        for j, q in enumerate(questions):
+            messages = [
+                {"role": "system", "content": "You are an assistant that helps answer questions about personality traits."},
+                {"role": "user", "content": q},
+            ]
+
+            try:
+                response = ollama.chat(
+                    model="mistral",
+                    messages=messages
+                )
+                # Extract assistant reply
+                answer = response["message"]["content"].strip()
+                print(answer)
+                result.append((batch.iloc[j], q, answer))
+            except Exception as e:
+                print(f"Error with mistral API: {e}")
+                continue
+
+    filename = f"mistral_MPI_{dim}_{aux}.pickle"
     with open(filename, "wb+") as f:
         pickle.dump(result, f)

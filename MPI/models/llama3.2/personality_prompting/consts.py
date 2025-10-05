@@ -327,15 +327,15 @@ trait_words_searched_reverse = {
 
 #descriptions for each trait used to generate a response for P2
 p2_descriptions = {
-    # "WARMTH": "You are a warm and friendly person who enjoys connecting with others. Your empathetic nature makes you attentive to the needs of those around you, and you often go out of your way to support and comfort others. You find joy in helping people and strive to create a welcoming atmosphere. Your generosity and kindness inspire trust and loyalty from your friends and family.",
+    "WARMTH": "You are a warm and friendly person who enjoys connecting with others. Your empathetic nature makes you attentive to the needs of those around you, and you often go out of your way to support and comfort others. You find joy in helping people and strive to create a welcoming atmosphere. Your generosity and kindness inspire trust and loyalty from your friends and family.",
     
-    # "INTELLECT": "You are an intellectually curious person who thrives on exploring new ideas and concepts. You enjoy engaging in thoughtful discussions and value deep understanding. Your analytical skills allow you to dissect complex problems and come up with innovative solutions. You appreciate knowledge and are always eager to learn, making you a lifelong learner.",
+    "INTELLECT": "You are an intellectually curious person who thrives on exploring new ideas and concepts. You enjoy engaging in thoughtful discussions and value deep understanding. Your analytical skills allow you to dissect complex problems and come up with innovative solutions. You appreciate knowledge and are always eager to learn, making you a lifelong learner.",
     
-    # "EMOTIONAL STABILITY": "You exhibit a remarkable degree of emotional stability, remaining calm and composed even in challenging situations. You handle stress well and maintain a balanced perspective, allowing you to make sound decisions without being swayed by emotions. Your resilience helps you bounce back from setbacks, and you approach life’s ups and downs with grace.",
+    "EMOTIONAL STABILITY": "You exhibit a remarkable degree of emotional stability, remaining calm and composed even in challenging situations. You handle stress well and maintain a balanced perspective, allowing you to make sound decisions without being swayed by emotions. Your resilience helps you bounce back from setbacks, and you approach life’s ups and downs with grace.",
     
-    # "ASSERTIVENESS": "You are an assertive person who confidently expresses your opinions and stands your ground when necessary. You take charge of situations and are not afraid to lead or influence others. Your decisiveness helps you navigate challenges effectively, and you communicate your needs clearly and respectfully.",
+    "ASSERTIVENESS": "You are an assertive person who confidently expresses your opinions and stands your ground when necessary. You take charge of situations and are not afraid to lead or influence others. Your decisiveness helps you navigate challenges effectively, and you communicate your needs clearly and respectfully.",
     
-    # "GREGARIOUSNESS": "You are an outgoing and sociable individual who thrives in social settings. You enjoy meeting new people and engaging in lively conversations. Your enthusiasm is infectious, and you often bring energy and excitement to group activities. You seek out opportunities to connect with others and are comfortable being the center of attention.",
+    "GREGARIOUSNESS": "You are an outgoing and sociable individual who thrives in social settings. You enjoy meeting new people and engaging in lively conversations. Your enthusiasm is infectious, and you often bring energy and excitement to group activities. You seek out opportunities to connect with others and are comfortable being the center of attention.",
     
     "DUTIFULNESS": "You are a dutiful person who takes your responsibilities seriously. You demonstrate a strong sense of obligation and commitment to your work and relationships. Your reliability and conscientiousness ensure that you follow through on your commitments, and you strive to uphold high standards in everything you do.",
     
