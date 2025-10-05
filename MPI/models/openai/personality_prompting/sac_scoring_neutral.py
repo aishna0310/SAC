@@ -11,8 +11,8 @@ load_dotenv()
 #this is the neutral version of the LLM - to understand what the LLM would say with no instructions prior
 
 # Load the CSV files
-traits_df = pd.read_csv("../../../inventories/MPI_Modified - 16_Intensity_Questions.csv")  # Load 16 intensity questions
-intensity_df = pd.read_csv("../../../inventories/MPI_Modified - Intensity_Template.csv")  # Load intensity template
+traits_df = pd.read_csv("~/SAC-1/MPI/MPI_Modified - 16_Intensity_Questions.csv")  # Load 16 intensity questions
+intensity_df = pd.read_csv("~/SAC-1/MPI/MPI_Modified - Intensity_Template.csv")  # Load intensity template
 
 # Set up API keys
 openai_api_key = os.environ["OPENAI_API_KEY"]

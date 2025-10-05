@@ -1,0 +1,47 @@
+Trait: WARMTH
+llama - Mean: 4.3, Variance: 0.41
+
+Trait: INTELLECT
+llama - Mean: 4.3, Variance: 0.41
+
+Trait: EMOTIONAL STABILITY
+llama - Mean: 4.1, Variance: 0.49000000000000005
+
+Trait: ASSERTIVENESS
+llama - Mean: 4.3, Variance: 0.41
+
+Trait: GREGARIOUSNESS
+llama - Mean: 4.3, Variance: 0.41
+
+Trait: DUTIFULNESS
+llama - Mean: 4.1, Variance: 0.49000000000000005
+
+Trait: FRIENDLINESS
+llama - Mean: 4.1, Variance: 0.49000000000000005
+
+Trait: SENSITIVITY
+llama - Mean: 3.9, Variance: 0.49000000000000005
+
+Trait: DISTRUST
+llama - Mean: 4.5, Variance: 0.25
+
+Trait: IMAGINATION
+llama - Mean: 4.3, Variance: 0.41
+
+Trait: RESERVE
+llama - Mean: 4.1, Variance: 0.49000000000000005
+
+Trait: ANXIETY
+llama - Mean: 3.9, Variance: 0.48999999999999994
+
+Trait: COMPLEXITY
+llama - Mean: 4.1, Variance: 0.49000000000000005
+
+Trait: INTROVERSION
+llama - Mean: 4.3, Variance: 0.41
+
+Trait: ORDERLINESS
+llama - Mean: 4.3, Variance: 0.41
+
+Trait: EMOTIONALITY
+llama - Mean: 3.9, Variance: 0.48999999999999994

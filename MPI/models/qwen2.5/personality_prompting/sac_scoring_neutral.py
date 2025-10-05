@@ -1,6 +1,5 @@
 import pandas as pd
-import openai
-import os
+import ollama
 import numpy as np
 from consts import p2_descriptions
 
@@ -8,17 +7,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key = os.environ["OPENROUTER_API_KEY"],
-)
 #this is the neutral version of the LLM - to understand what the LLM would say with no instructions prior
 
 # Load the CSV files
-traits_df = pd.read_csv("../../../MPI_Modified - 16_Intensity_Questions.csv")  # Load 16 intensity questions
-intensity_df = pd.read_csv("../../../MPI_Modified - Intensity_Template.csv")  # Load intensity template
+traits_df = pd.read_csv("~/SAC-1/MPI/MPI_Modified - 16_Intensity_Questions.csv")  # Load 16 intensity questions
+intensity_df = pd.read_csv("~/SAC-1/MPI/MPI_Modified - Intensity_Template.csv")  # Load intensity template
 
 # Function to generate batch prompt for multiple questions
 def generate_batch_prompt(trait, questions, intensity_factor, intensity_answers):
@@ -44,21 +37,26 @@ def generate_batch_prompt(trait, questions, intensity_factor, intensity_answers)
     - Answer2: <number>
     """
 
-# Function to call the OpenAI API for a batch prompt
-def get_batch_response_gemini(prompt):
+# Function to call the ollama API for a batch prompt
+def get_batch_response_qwen(prompt):
     messages=[
             {"role": "system", "content": "You are an assistant that helps answer questions about personality traits."},
             {"role": "user", "content": prompt}
         ]
-    completion = client.chat.completions.create(
-            model="google/gemini-2.5-pro-preview-03-25",
-            messages=messages
+    response = ollama.chat(
+            model="qwen2.5",
+            messages=messages,
+            options={
+                'temperature': 0,
+                'top_p': 0.95,
+                'num_predict': 400
+            }
         )
     
-    return completion.choices[0].message.content.strip()
+    return response['message']['content'].strip()
 
 # Initialize dictionaries to store results for each model
-results_gemini = {}
+results_qwen = {}
 
 # Loop over each trait and its questions
 for index, row in traits_df.iterrows():
@@ -85,24 +83,24 @@ for index, row in traits_df.iterrows():
         batch_prompt = generate_batch_prompt(trait, questions, intensity_factor, intensity_answers)
         
         # Get response from the APIs for the batch prompt - comment out whats not needed
-        gemini_response = get_batch_response_gemini(batch_prompt)
+        qwen_response = get_batch_response_qwen(batch_prompt)
         
         try:
-            gemini_responses = gemini_response.split("\n")
-            print(f"gemini Responses: {gemini_responses}")  # Debugging print
+            qwen_responses = qwen_response.split("\n")
+            print(f"qwen Responses: {qwen_responses}")  # Debugging print
             
-            if len(gemini_responses) < 2:
-                raise IndexError("Expected at least two lines in gemini response.")
+            if len(qwen_responses) < 2:
+                raise IndexError("Expected at least two lines in qwen response.")
 
-            gemini_score_1 = float(gemini_responses[0].split(":")[-1].strip())
-            gemini_score_2 = float(gemini_responses[1].split(":")[-1].strip())
+            qwen_score_1 = float(qwen_responses[0].split(":")[-1].strip())
+            qwen_score_2 = float(qwen_responses[1].split(":")[-1].strip())
 
-            if trait not in results_gemini:
-                results_gemini[trait] = []
-            results_gemini[trait].extend([gemini_score_1, gemini_score_2])
+            if trait not in results_qwen:
+                results_qwen[trait] = []
+            results_qwen[trait].extend([qwen_score_1, qwen_score_2])
 
         except (ValueError, IndexError) as e:
-            print(f"Error processing gemini response: {e}")
+            print(f"Error processing qwen response: {e}")
 
         
 
@@ -116,11 +114,11 @@ def calculate_stats(results):
     return summary_stats
 
 #comment out stats which are not needed
-gemini_stats = calculate_stats(results_gemini)
+qwen_stats = calculate_stats(results_qwen)
 
 # Print or save results for comparison
 for trait in traits_df['Personality'].unique():
     print(f"\nTrait: {trait}")
-    print(f"gemini - Mean: {gemini_stats[trait]['mean']}, Variance: {gemini_stats[trait]['variance']}")
+    print(f"qwen - Mean: {qwen_stats[trait]['mean']}, Variance: {qwen_stats[trait]['variance']}")
 
 #["For the trait 'WARMTH' with the intensity factor 'Frequency':", '', 'Q1: Know how to comfort others.  ', '**Answer: 4 (Often)**', '', 'Q2: Cheer people up.  ', '**Answer: 4 (Often)**']
