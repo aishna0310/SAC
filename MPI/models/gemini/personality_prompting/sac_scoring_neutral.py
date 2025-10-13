@@ -26,6 +26,7 @@ def generate_batch_prompt(trait, questions, intensity_factor, intensity_answers)
     definition = p2_descriptions.get(trait)
     questions_str = "\n\n".join([f"Q{i+1}: {q}" for i, q in enumerate(questions)])
     return f"""
+    Personality intensity is defined as a combination of 5 factors including frequency, depth, threshold, effort, and willingness, rated on a scale of 1 to 5.
     The trait {trait} is defined by {definition}
     For the trait '{trait}' with the intensity factor '{intensity_factor}', please answer the following questions: 
     

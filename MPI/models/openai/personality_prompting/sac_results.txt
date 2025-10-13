@@ -106,7 +106,6 @@ Trait: EMOTIONALITY, Mean: 2.8666666666666667, Variance: 0.11555555555555556
 ==================================================
 Processing: ASSERTIVENESS at intensity 5
 ==================================================
-Error processing OpenAI response for trait SENSITIVITY: could not convert string to float: 'To what extent do you Like to read.?\n\n3'
 
 Results for ASSERTIVENESS at intensity 5:
 Trait: WARMTH, Mean: 3.1333333333333333, Variance: 0.11555555555555551
@@ -465,26 +464,7 @@ Trait: WARMTH, Mean: 2.7333333333333334, Variance: 0.32888888888888873
 Trait: INTELLECT, Mean: 3.0, Variance: 0.13333333333333333
 Trait: EMOTIONAL STABILITY, Mean: 2.933333333333333, Variance: 0.06222222222222222
 Trait: ASSERTIVENESS, Mean: 3.0, Variance: 0.0
-Processing: GREGARIOUSNESS at intensity 1
-==================================================
-
-Results for GREGARIOUSNESS at intensity 1:
-Trait: WARMTH, Mean: 2.7333333333333334, Variance: 0.32888888888888873
-Trait: INTELLECT, Mean: 3.0, Variance: 0.13333333333333333
 Trait: EMOTIONAL STABILITY, Mean: 2.933333333333333, Variance: 0.06222222222222222
-Trait: ASSERTIVENESS, Mean: 3.0, Variance: 0.0
-Results for GREGARIOUSNESS at intensity 1:
-Trait: WARMTH, Mean: 2.7333333333333334, Variance: 0.32888888888888873
-Trait: INTELLECT, Mean: 3.0, Variance: 0.13333333333333333
-Trait: EMOTIONAL STABILITY, Mean: 2.933333333333333, Variance: 0.06222222222222222
-Trait: ASSERTIVENESS, Mean: 3.0, Variance: 0.0
-Trait: WARMTH, Mean: 2.7333333333333334, Variance: 0.32888888888888873
-Trait: INTELLECT, Mean: 3.0, Variance: 0.13333333333333333
-Trait: EMOTIONAL STABILITY, Mean: 2.933333333333333, Variance: 0.06222222222222222
-Trait: ASSERTIVENESS, Mean: 3.0, Variance: 0.0
-Trait: EMOTIONAL STABILITY, Mean: 2.933333333333333, Variance: 0.06222222222222222
-Trait: ASSERTIVENESS, Mean: 3.0, Variance: 0.0
-Trait: ASSERTIVENESS, Mean: 3.0, Variance: 0.0
 Trait: GREGARIOUSNESS, Mean: 1.0, Variance: 0.0
 Trait: DUTIFULNESS, Mean: 3.1333333333333333, Variance: 0.11555555555555555
 Trait: FRIENDLINESS, Mean: 2.466666666666667, Variance: 0.3822222222222223
@@ -589,7 +569,6 @@ Trait: EMOTIONALITY, Mean: 3.0, Variance: 0.0
 ==================================================
 Processing: EMOTIONALITY at intensity 5
 ==================================================
-Error processing OpenAI response for trait EMOTIONALITY: could not convert string to float: 'N/A'
 
 Results for EMOTIONALITY at intensity 5:
 Trait: WARMTH, Mean: 3.2, Variance: 0.15999999999999998

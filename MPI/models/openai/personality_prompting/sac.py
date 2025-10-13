@@ -15,8 +15,8 @@ openai_api_key = os.environ["OPENAI_API_KEY"]
 
 
 # Load the CSV files
-traits_df = pd.read_csv("../../../inventories/MPI_Modified - 16_Intensity_Questions.csv")  # Load 16 intensity questions
-intensity_df = pd.read_csv("../../../inventories/MPI_Modified - Intensity_Template.csv")  # Load intensity template
+traits_df = pd.read_csv("../../../MPI_Modified - 16_Intensity_Questions.csv")  # Load 16 intensity questions
+intensity_df = pd.read_csv("../../../MPI_Modified - Intensity_Template.csv")  # Load intensity template
 
 # Function to build the prompt with dynamic intensity
 #might have to make new templates for each model - handle during testing
@@ -176,14 +176,15 @@ def process_results_for_model(model_name, response_function, trait_const, intens
 
 # List of all 16 traits
 all_traits = [
-    "ANXIETY", "ASSERTIVENESS", "COMPLEXITY", "DISTRUST", 
-    "DUTIFULNESS", "EMOTIONAL STABILITY", "FRIENDLINESS", "GREGARIOUSNESS",
-    "EMOTIONALITY", "IMAGINATION", "INTELLECT", "INTROVERSION",
-    "ORDERLINESS", "RESERVE", "SENSITIVITY", "WARMTH"
+    "ANXIETY"
+    # , "ASSERTIVENESS", "COMPLEXITY", "DISTRUST", 
+    # "DUTIFULNESS", "EMOTIONAL STABILITY", "FRIENDLINESS", "GREGARIOUSNESS",
+    # "EMOTIONALITY", "IMAGINATION", "INTELLECT", "INTROVERSION",
+    # "ORDERLINESS", "RESERVE", "SENSITIVITY", "WARMTH"
 ]
 
 # Intensities to test
-intensities = [1, 3, 5]
+intensities = [ 5]
 
 # Run for all traits and intensities
 for trait_const in all_traits:
